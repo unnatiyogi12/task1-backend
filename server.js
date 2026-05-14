@@ -27,3 +27,5 @@ app.post('/api/users', saveUser);
 app.listen(process.env.PORT, () => {
     console.log(`Server Running on Port ${process.env.PORT}`);
 });
+
+export default app;
