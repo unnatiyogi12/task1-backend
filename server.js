@@ -17,6 +17,11 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('Error connecting to MongoDB:', error);
 })
 app.use(express.json());
+
+app.get("/", (req, res) => {
+   res.send("Backend Running Successfully");
+});
+
 app.post('/api/users', saveUser);
 
 app.listen(process.env.PORT, () => {
